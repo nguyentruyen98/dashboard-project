@@ -9,7 +9,7 @@ Project is created with:
 * Eslint
 * Sass
 * ...
-* ## Setup
+## Setup
 To run this project, install it locally using npm:
 ```
 $ npm install
