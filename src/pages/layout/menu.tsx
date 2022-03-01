@@ -47,7 +47,6 @@ const Menu = ({ toggle, setToggle }: IMenuProps) => {
     if (path === pathname) return;
     navigate(path);
   };
-  console.log(toggle);
 
   return (
     <>
