@@ -1,12 +1,17 @@
 # dashboard-project
 
-Example Dashboar project
-
-1. Setup local environemt
+## General info
+This is example Dashboard project
+## Technologies
+Project is created with:
+* React
+* Antd
+* Eslint
+* Sass
+* ...
+* ## Setup
+To run this project, install it locally using npm:
 ```
 $ npm install
-```
-2. Start localhost
-```
 $ npm start
 ```
