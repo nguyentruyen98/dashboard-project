@@ -1,4 +1,27 @@
 @import "styles/_variables";
+.dark {
+  .layout-header {
+    background: $dark-theme-color-2;
+  }
+  .sider {
+    background: $dark-theme-color-1;
+  }
+  .content {
+    background-color: $dark-theme-color-3;
+    color: white;
+  }
+}
+.light {
+  .layout-header {
+    background: $light-theme-color-2;
+  }
+  .sider {
+    background: $light-theme-color-1;
+  }
+  .content {
+    background-color: $light-theme-color-3;
+  }
+}
 
 .layout {
   height: 100vh;
@@ -37,7 +60,6 @@
     }
   }
   .sider {
-    background: $dark-sienna;
     color: $white;
     padding: 15px 40px;
     .logo {
