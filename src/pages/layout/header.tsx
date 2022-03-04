@@ -14,7 +14,7 @@ const Header = () => {
       <p className="title">{getMatchTitle(location.pathname)}</p>
       <div className="profile">
         <p className="user-name">Truyen Nguyen</p>
-        <img src={userIcon} height={40} width={40} alt="Profile" />
+        <img src={userIcon} height={50} width={50} alt="Profile" />
       </div>
     </div>
   );
