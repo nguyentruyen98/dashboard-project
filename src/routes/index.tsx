@@ -1,5 +1,5 @@
 import Layout from "pages/layout";
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import WapperRouteComponent from "routes/config";
 import { ROUTES } from "routes/routes";
@@ -36,6 +36,6 @@ const element = {
 
 const RenderRouter = () => {
   const elements = useRoutes([element]);
-  return <Suspense fallback={<p>Loading...</p>}>{elements}</Suspense>;
+  return elements;
 };
 export default RenderRouter;

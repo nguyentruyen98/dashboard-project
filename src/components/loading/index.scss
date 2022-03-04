@@ -1,0 +1,16 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  position: absolute;
+  top: calc(50% - 64px);
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  animation: rotating 3s linear infinite;
+}
