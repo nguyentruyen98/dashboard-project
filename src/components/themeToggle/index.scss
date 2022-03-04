@@ -3,4 +3,11 @@
   bottom: 20px;
   right: 20px;
   cursor: pointer;
+  transition: all 0.15s;
+  &:hover {
+    transform: scale(1.15);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
