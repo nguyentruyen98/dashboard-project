@@ -1,9 +1,10 @@
+import Loading from "components/loading";
 import React from "react";
 
 const GamePage = () => {
   return (
     <div>
-      <p>test</p>
+      <Loading />
     </div>
   );
 };

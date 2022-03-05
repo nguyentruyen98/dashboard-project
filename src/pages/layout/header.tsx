@@ -1,3 +1,4 @@
+import userIcon from "assets/icons/user-icon.png";
 import React from "react";
 import { useLocation } from "react-router-dom";
 const Header = () => {
@@ -12,12 +13,8 @@ const Header = () => {
     <div className="header">
       <p className="title">{getMatchTitle(location.pathname)}</p>
       <div className="profile">
-        <img
-          src="https://img.icons8.com/dusk/64/000000/circled-user-male-skin-type-1-2.png"
-          height={35}
-          width={35}
-          alt="Profile"
-        />
+        <p className="user-name">Truyen Nguyen</p>
+        <img src={userIcon} height={50} width={50} alt="Profile" />
       </div>
     </div>
   );

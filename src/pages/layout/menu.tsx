@@ -1,9 +1,12 @@
+import clsx from "clsx";
 import { IMenuListValues, IMenuProps } from "pages/layout/index.d";
 import React from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 const Menu = ({ toggle, setToggle }: IMenuProps) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const [itemActive, setItemActive] = useState(0);
 
   const menuList: IMenuListValues[] = [
     {
@@ -43,8 +46,9 @@ const Menu = ({ toggle, setToggle }: IMenuProps) => {
       imgSrc: "https://img.icons8.com/doodle/96/000000/shopping-cart--v1.png",
     },
   ];
-  const handleClickMenu = (path: string) => {
+  const handleClickMenu = (path: string, id: number) => {
     if (path === pathname) return;
+    setItemActive(id);
     navigate(path);
   };
 
@@ -73,8 +77,11 @@ const Menu = ({ toggle, setToggle }: IMenuProps) => {
         {menuList.map((item: IMenuListValues, index: number) => {
           return (
             <div
-              className="menu-item"
-              onClick={() => handleClickMenu(item.path)}
+              className={clsx(
+                "menu-item",
+                itemActive === index && "active-item"
+              )}
+              onClick={() => handleClickMenu(item.path, index)}
               key={index}
             >
               <img

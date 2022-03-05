@@ -1,5 +1,6 @@
 import { Button as AntdButton } from "antd";
 import Buttom from "components/button";
+import Loading from "components/loading";
 import useDetectScreen from "hook/useDetectScreen";
 import useWindowResize from "hook/useWindowSize";
 import React from "react";
@@ -29,6 +30,7 @@ const Home = () => {
       <button onClick={() => dispatch(decrement())}>-</button>
       <button onClick={() => dispatch(increment())}>+</button>
       <p>{count}</p>
+      <Loading />
     </div>
   );
 };
