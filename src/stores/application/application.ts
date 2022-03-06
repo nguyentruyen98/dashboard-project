@@ -10,31 +10,23 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 // đang nghiên cứu lại cách tổ chức lại floder stores
 
 export interface ICouterState {
-  value: number;
-  status: "idle" | "loading" | "failed";
   theme: "light" | "dark";
+  loading: boolean;
 }
 
 const initialState: ICouterState = {
-  value: 0,
-  status: "idle",
-  theme: "light",
+  theme: "dark",
+  loading: false,
 };
-const couterSlice = createSlice({
-  name: "couter",
+const applicationSlice = createSlice({
+  name: "application",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
     setTheme: (state, action: PayloadAction<"light" | "dark">) => {
       state.theme = action.payload;
     },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload;
     },
   },
 });
@@ -45,20 +37,20 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   Action<string>
 >;
 export const changeTheme = (): AppThunk => (dispatch, getState) => {
-  const currentTheme = getState().couter.theme;
+  const currentTheme = getState().application.theme;
   if (currentTheme === "light") dispatch(setTheme("dark"));
-  dispatch(setTheme("light"));
+  else dispatch(setTheme("light"));
 };
-export const { increment, decrement, incrementByAmount, setTheme } =
-  couterSlice.actions;
+export const { setTheme, setLoading } = applicationSlice.actions;
 
 export const store = configureStore({
   reducer: {
-    couter: couterSlice.reducer,
+    application: applicationSlice.reducer,
   },
 });
 type RootState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
 
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
-export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useApplicationSelector: TypedUseSelectorHook<RootState> =
+  useSelector;
+export const useApplicationDispatch = () => useDispatch<AppDispatch>();
