@@ -3,9 +3,27 @@ import React from "react";
 
 const GamePage = () => {
   return (
-    <div>
-      <Loading />
-    </div>
+    <>
+      {" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      <p>sssssssssss</p> <p>sssssssssss</p>
+    </>
   );
 };
 
