@@ -7,6 +7,7 @@ import { ROUTES } from "routes/routes";
 const HomePage = lazy(() => import("pages/home"));
 const GamePage = lazy(() => import("pages/game"));
 const FoodPage = lazy(() => import("pages/food"));
+const WeatherPage = lazy(() => import("pages/weather"));
 const NotFoundPage = lazy(() => import("pages/404"));
 
 const element = {
@@ -24,6 +25,12 @@ const element = {
     {
       path: ROUTES.FOOD,
       element: <WapperRouteComponent element={<FoodPage />} title="Food" />,
+    },
+    {
+      path: ROUTES.WEATHER,
+      element: (
+        <WapperRouteComponent element={<WeatherPage />} title="Weather" />
+      ),
     },
     {
       path: ROUTES.NOT_FOUND,
