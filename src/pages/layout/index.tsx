@@ -10,7 +10,6 @@ import React, { Suspense, useState } from "react";
 import { Outlet } from "react-router-dom";
 import {
   changeTheme,
-  setLoading,
   useApplicationDispatch,
   useApplicationSelector,
 } from "stores/application/application";
@@ -33,7 +32,7 @@ const Layout = () => {
         </AntdHeader>
         {applicationState.loading && <Loading />}
         <Content className="content">
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<></>}>
             <Outlet />
             <ThemeToggle
               theme={applicationState.theme}
