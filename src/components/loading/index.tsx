@@ -1,7 +1,7 @@
-import "./index.scss";
+import './index.scss';
 
-import loadingIcon from "assets/icons/loading-icon.png";
-import React from "react";
+import loadingIcon from 'assets/icons/loading-icon.png';
+import React from 'react';
 const Loading = () => {
   return (
     <div className="loading-wrapper">

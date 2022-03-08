@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react';
 
 const GamePage = () => {
   return (
     <>
-      {" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
-      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{" "}
+      {' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
+      <p>sssssssssss</p> <p>sssssssssss</p> <p>sssssssssss</p>{' '}
       <p>sssssssssss</p> <p>sssssssssss</p>
     </>
   );

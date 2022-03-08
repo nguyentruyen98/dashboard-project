@@ -1,12 +1,12 @@
-import { useState } from "react";
+import {useState} from 'react';
 
 export const useTheme = (): [string, () => void] => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('dark');
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
+    if (theme === 'light') {
+      setTheme('dark');
     } else {
-      setTheme("light");
+      setTheme('light');
     }
   };
   return [theme, toggleTheme];

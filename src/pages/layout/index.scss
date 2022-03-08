@@ -1,5 +1,5 @@
-@import "styles/_variables";
-@import "styles/common";
+@import 'styles/_variables';
+@import 'styles/common';
 .dark {
   .layout-header {
     background: $dark-theme-color-2;
@@ -111,7 +111,7 @@
         }
         p {
           white-space: nowrap;
-          font-family: "Hachi Maru Pop", cursive;
+          font-family: 'Hachi Maru Pop', cursive;
         }
         &:hover {
           @include hover(null);
