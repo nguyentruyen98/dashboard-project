@@ -1,14 +1,14 @@
-import {AnyObject} from 'constants/type';
+import {AnyObject, MethodsType} from 'constants/type';
 
 export interface IApiProps {
   url: string;
-  method?: 'get' | 'post' | 'put' | 'patch' | 'delete';
+  method?: MethodsType;
   params?: AnyObject | string | undefined;
   data?: string;
 }
 export interface IUseApiProps {
   url: string;
-  method: 'get' | 'post' | 'put' | 'patch' | 'delete';
+  method: MethodsType;
   loadInitialState?: boolean;
   params?: AnyObject | string | undefined;
 }
