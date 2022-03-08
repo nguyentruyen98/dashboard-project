@@ -61,7 +61,14 @@ const useApi = ({
       setApiLoading(false);
       setLoading(false);
     };
-  }, [currentUrl, currentMethod, currentParams, currentInitialState, errorMsg]);
+  }, [
+    currentUrl,
+    currentMethod,
+    currentParams,
+    currentInitialState,
+    errorMsg,
+    dispatch,
+  ]);
   return {
     data,
     apiLoading,
