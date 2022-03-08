@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AnyObject } from "constants/type";
 import { IApiProps, IUseApiProps } from "hook/useApi/index.d";
 import get from "lodash/get";
 import { useEffect, useState } from "react";
@@ -23,7 +24,7 @@ const useApi = ({
   params = {},
   loadInitialState = false,
 }: IUseApiProps) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<AnyObject>();
   const [currentUrl, setCurrentUrl] = useState(url);
   const [currentMethod, setCurrentMethod] = useState(method);
   const [currentParams, setCurrentParams] = useState(params);
@@ -38,7 +39,7 @@ const useApi = ({
         dispatch(setLoading(true));
         setApiLoading(true);
         const response = await Api({
-          url: currentUrl,
+          url,
           method: currentMethod,
           params: currentParams,
         });
@@ -57,10 +58,6 @@ const useApi = ({
     } else {
       setApiLoading(false);
     }
-    return () => {
-      setApiLoading(false);
-      setLoading(false);
-    };
   }, [currentUrl, currentMethod, currentParams, currentInitialState, errorMsg]);
   return {
     data,

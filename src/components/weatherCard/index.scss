@@ -1,0 +1,42 @@
+@import "styles/_variables";
+
+.warm-bg {
+  background-image: url("../../assets/images/warm.jpg");
+}
+.cold-bg {
+  background-image: url("../../assets/images/cold.jpg");
+}
+.weather-card {
+  max-width: 400px;
+  padding: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 12px;
+  color: $white;
+
+  .country {
+    font-size: 20px;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  }
+  .temp {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    line-height: 90px;
+  }
+  .weather {
+    margin-top: 30px;
+    font-size: 48px;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  }
+}
