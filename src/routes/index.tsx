@@ -1,5 +1,5 @@
 import Layout from "pages/layout";
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import WapperRouteComponent from "routes/config";
 import { ROUTES } from "routes/routes";
@@ -7,6 +7,7 @@ import { ROUTES } from "routes/routes";
 const HomePage = lazy(() => import("pages/home"));
 const GamePage = lazy(() => import("pages/game"));
 const FoodPage = lazy(() => import("pages/food"));
+const WeatherPage = lazy(() => import("pages/weather"));
 const NotFoundPage = lazy(() => import("pages/404"));
 
 const element = {
@@ -26,6 +27,12 @@ const element = {
       element: <WapperRouteComponent element={<FoodPage />} title="Food" />,
     },
     {
+      path: ROUTES.WEATHER,
+      element: (
+        <WapperRouteComponent element={<WeatherPage />} title="Weather" />
+      ),
+    },
+    {
       path: ROUTES.NOT_FOUND,
       element: (
         <WapperRouteComponent element={<NotFoundPage />} title="Not Found" />
@@ -36,6 +43,6 @@ const element = {
 
 const RenderRouter = () => {
   const elements = useRoutes([element]);
-  return <Suspense fallback={<p>Loading...</p>}>{elements}</Suspense>;
+  return elements;
 };
 export default RenderRouter;

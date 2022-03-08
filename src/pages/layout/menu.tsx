@@ -1,15 +1,25 @@
+import weatherIcon from "assets/icons/weather-icon.png";
+import clsx from "clsx";
 import { IMenuListValues, IMenuProps } from "pages/layout/index.d";
 import React from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 const Menu = ({ toggle, setToggle }: IMenuProps) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const [itemActive, setItemActive] = useState(location.pathname);
 
   const menuList: IMenuListValues[] = [
     {
       title: "Home",
       path: "/",
       imgSrc: "https://img.icons8.com/doodle/480/000000/home--v1.png",
+    },
+    {
+      title: "Wheather",
+      path: "/weather",
+      imgSrc: weatherIcon,
     },
 
     {
@@ -45,6 +55,7 @@ const Menu = ({ toggle, setToggle }: IMenuProps) => {
   ];
   const handleClickMenu = (path: string) => {
     if (path === pathname) return;
+    setItemActive(path);
     navigate(path);
   };
 
@@ -73,7 +84,10 @@ const Menu = ({ toggle, setToggle }: IMenuProps) => {
         {menuList.map((item: IMenuListValues, index: number) => {
           return (
             <div
-              className="menu-item"
+              className={clsx(
+                "menu-item",
+                itemActive === item.path && "active-item"
+              )}
               onClick={() => handleClickMenu(item.path)}
               key={index}
             >
