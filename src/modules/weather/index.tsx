@@ -1,5 +1,5 @@
-import useApi from "hook/useApi";
-import React from "react";
+import useApi from 'hook/useApi';
+import React from 'react';
 const Weather = () => {
   // const f = async () => {
   //   const res = await fetch("https://reqres.in/api/users/");
@@ -9,9 +9,9 @@ const Weather = () => {
   // React.useEffect(() => {
   //   f();
   // }, []);
-  const { data, apiLoading } = useApi({
-    url: "https://reqres.in/api/users/",
-    method: "get",
+  const {data, apiLoading} = useApi({
+    url: 'https://reqres.in/api/users/',
+    method: 'get',
     loadInitialState: true,
   });
   console.log(data);

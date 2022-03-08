@@ -1,5 +1,5 @@
-import React from "react";
-import { IWrapperRouteComponentProps } from "routes/index.d";
+import React from 'react';
+import {IWrapperRouteComponentProps} from 'routes/index.d';
 const WapperRouteComponent = ({
   title,
   ...props

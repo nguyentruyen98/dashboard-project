@@ -1,6 +1,6 @@
-import userIcon from "assets/icons/user-icon.png";
-import React from "react";
-import { useLocation } from "react-router-dom";
+import userIcon from 'assets/icons/user-icon.png';
+import React from 'react';
+import {useLocation} from 'react-router-dom';
 const Header = () => {
   const location = useLocation();
 

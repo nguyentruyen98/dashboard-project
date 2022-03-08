@@ -18,16 +18,18 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "simple-import-sort", "react-hooks"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "react-hooks"
+  ],
   "rules": {
     "simple-import-sort/sort": "error",
     "prettier/prettier": "error",
     "sort-imports": "off",
     "import/order": "off",
-    "max-lines": [
-      "error",
-      300
-    ],
+    "max-lines": ["error", 300],
     "no-unused-vars": [
       "error",
       {
