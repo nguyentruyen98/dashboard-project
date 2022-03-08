@@ -1,26 +1,26 @@
-import axios from "axios";
-import { AnyObject } from "constants/type";
-import { IApiProps, IUseApiProps } from "hook/useApi/index.d";
-import get from "lodash/get";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import {AnyObject} from 'constants/type';
+import {IApiProps, IUseApiProps} from 'hook/useApi/index.d';
+import get from 'lodash/get';
+import {useEffect, useState} from 'react';
 import {
   setLoading,
   useApplicationDispatch,
-} from "stores/application/application";
+} from 'stores/application/application';
 
-export const Api = async ({ url, method = "get", params, data }: IApiProps) => {
+export const Api = async ({url, method = 'get', params, data}: IApiProps) => {
   try {
-    const response = await axios({ url, method, params, data });
+    const response = await axios({url, method, params, data});
     return response && response.data;
   } catch (error) {
     // handle error here
-    const dataResponse = "Something went wrong. Please try again.";
+    const dataResponse = 'Something went wrong. Please try again.';
     throw dataResponse;
   }
 };
 const useApi = ({
   url,
-  method = "get",
+  method = 'get',
   params = {},
   loadInitialState = false,
 }: IUseApiProps) => {
@@ -46,7 +46,7 @@ const useApi = ({
         setData(response);
       } catch (error) {
         // handle error here
-        const msg = get(error, "response.data.message", "Error");
+        const msg = get(error, 'response.data.message', 'Error');
         setErrorMsg(msg);
       } finally {
         dispatch(setLoading(false));
@@ -58,6 +58,7 @@ const useApi = ({
     } else {
       setApiLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUrl, currentMethod, currentParams, currentInitialState, errorMsg]);
   return {
     data,
