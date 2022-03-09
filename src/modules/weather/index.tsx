@@ -8,7 +8,7 @@ const {Option} = Select;
 
 const Weather = () => {
   const [city, setCity] = useState({lon: 106.666672, lat: 10.83333});
-  // console.log(city);
+
   const {data: weatherData, setCurrentParams} = useApi({
     url: `${CONFIG.API.WEATHER}?lat=${city.lat}&lon=${city.lon}&appid=${WEATHER_API_KEY}`,
     method: API_METHODS.GET,

@@ -1,0 +1,45 @@
+@import 'styles/_variables';
+
+.custom-button {
+  border: none;
+  box-shadow: none;
+  padding: 8px 20px;
+  height: unset;
+  width: 100%;
+  border-radius: 5px;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+  &:focus {
+    color: $black;
+  }
+}
+.dark-button {
+  color: $white;
+  background-color: $dark-theme-color-2;
+  &:hover {
+    background-color: $dark-theme-color-2;
+    opacity: 0.6;
+    color: $white;
+  }
+  &:focus {
+    background-color: $dark-theme-color-2;
+    color: $white;
+  }
+}
+.light-button {
+  color: $white;
+  background-color: $light-theme-color-2;
+  &:hover {
+    background-color: $light-theme-color-2;
+    opacity: 0.6;
+    color: $white;
+  }
+  &:focus {
+    background-color: $light-theme-color-2;
+    color: $white;
+  }
+}
