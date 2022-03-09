@@ -1,13 +1,23 @@
 import './index.scss';
 
 import {Button as AntdButton} from 'antd';
-import {BaseButtonProps} from 'antd/lib/button/button.d';
 import clsx from 'clsx';
+import {IButtonProps} from 'components/button/index.d';
 import React from 'react';
+import {useApplicationSelector} from 'stores/application/application';
+const Button = ({buttonType = 'default', ...props}: IButtonProps) => {
+  const applicationState = useApplicationSelector(state => state.application);
 
-const Button = ({...props}: BaseButtonProps) => {
   return (
-    <AntdButton className={clsx(props.className, 'custom-button')} {...props}>
+    <AntdButton
+      className={clsx(
+        props.className,
+        'custom-button',
+        applicationState.theme === 'dark' ? 'dark-button' : 'light-button',
+        buttonType,
+      )}
+      {...props}
+    >
       {props.children}
     </AntdButton>
   );

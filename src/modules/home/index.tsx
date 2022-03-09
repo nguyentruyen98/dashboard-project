@@ -1,9 +1,11 @@
+import Button from 'components/button';
 import React from 'react';
-
 const Home = () => {
   return (
-    // drop every test case here
-    <div></div>
+    <div>
+      <Button buttonType="error">My Button</Button>
+      <Button>My Button</Button>
+    </div>
   );
 };
 

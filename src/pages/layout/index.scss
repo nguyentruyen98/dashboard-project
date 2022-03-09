@@ -1,5 +1,4 @@
-@import 'styles/_variables';
-@import 'styles/common';
+@import 'styles/main';
 .dark {
   .layout-header {
     background: $dark-theme-color-2;
@@ -75,6 +74,9 @@
   .sider {
     color: $white;
     padding: 15px 40px;
+    max-width: 280px !important;
+    min-width: 280px !important;
+    width: 280px !important;
     .logo {
       display: flex;
       align-items: center;
@@ -90,7 +92,7 @@
         position: absolute;
         transform: rotate(180deg);
         cursor: pointer;
-        right: -48px;
+        right: -35px;
       }
     }
     .menu {
@@ -146,6 +148,53 @@
         }
         p {
           transition: all ease-in-out 10s;
+          display: none;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    position: relative;
+    .sider {
+      position: absolute;
+      z-index: 1;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      height: 100vh;
+      .logo {
+        padding: 0 15px;
+        justify-content: left;
+        &-img {
+          margin-right: 25px;
+        }
+      }
+    }
+    .sider-collapse {
+      max-width: 0 !important;
+      min-width: 0 !important;
+      top: 0;
+      left: 0;
+      padding: 15px 0;
+      .logo {
+        padding: 0;
+        &-img {
+          visibility: hidden;
+        }
+        .collapse {
+          right: -50px;
+          box-sizing: unset;
+          padding: 10px;
+        }
+      }
+      .menu {
+        display: none;
+      }
+    }
+    .layout-header {
+      padding-right: 20px;
+      .header {
+        img {
           display: none;
         }
       }

@@ -12,11 +12,13 @@ import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 export interface ICouterState {
   theme: 'light' | 'dark';
   loading: boolean;
+  toggle: boolean;
 }
 
 const initialState: ICouterState = {
   theme: 'dark',
   loading: false,
+  toggle: true,
 };
 const applicationSlice = createSlice({
   name: 'application',
@@ -27,6 +29,9 @@ const applicationSlice = createSlice({
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload;
+    },
+    setToggle: (state, action: PayloadAction<boolean>) => {
+      state.toggle = action.payload;
     },
   },
 });
@@ -41,7 +46,10 @@ export const changeTheme = (): AppThunk => (dispatch, getState) => {
   if (currentTheme === 'light') dispatch(setTheme('dark'));
   else dispatch(setTheme('light'));
 };
-export const {setTheme, setLoading} = applicationSlice.actions;
+// export const setToggle = (): AppThunk => (dispatch, getState) => {
+//   const currentToggle = getState().application.toggle;
+// };
+export const {setTheme, setLoading, setToggle} = applicationSlice.actions;
 
 export const store = configureStore({
   reducer: {

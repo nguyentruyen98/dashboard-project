@@ -1,14 +1,17 @@
 import weatherIcon from 'assets/icons/weather-icon.png';
 import clsx from 'clsx';
+import useDetectScreen from 'hook/useDetectScreen';
 import {IMenuListValues, IMenuProps} from 'pages/layout/index.d';
 import React from 'react';
 import {useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
+
 const Menu = ({toggle, setToggle}: IMenuProps) => {
   const {pathname} = useLocation();
   const navigate = useNavigate();
   const location = useLocation();
   const [itemActive, setItemActive] = useState(location.pathname);
+  const isDesktopScreen = useDetectScreen();
 
   const menuList: IMenuListValues[] = [
     {
@@ -54,6 +57,9 @@ const Menu = ({toggle, setToggle}: IMenuProps) => {
     },
   ];
   const handleClickMenu = (path: string) => {
+    if (!isDesktopScreen) {
+      setToggle(false);
+    }
     if (path === pathname) return;
     setItemActive(path);
     navigate(path);
