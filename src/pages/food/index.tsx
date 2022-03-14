@@ -1,7 +1,7 @@
+import Food from 'modules/food';
 import React from 'react';
-
-const Food = () => {
-  return <div>Food</div>;
+const FoodPage = () => {
+  return <Food />;
 };
 
-export default Food;
+export default FoodPage;

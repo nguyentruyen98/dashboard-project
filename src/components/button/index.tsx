@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import {IButtonProps} from 'components/button/index.d';
 import React from 'react';
 import {useApplicationSelector} from 'stores/application/application';
-const Button = ({buttonType = 'default', ...props}: IButtonProps) => {
+const Button = ({buttonType = 'default', onClick, ...props}: IButtonProps) => {
   const applicationState = useApplicationSelector(state => state.application);
 
   return (
@@ -16,6 +16,7 @@ const Button = ({buttonType = 'default', ...props}: IButtonProps) => {
         applicationState.theme === 'dark' ? 'dark-button' : 'light-button',
         buttonType,
       )}
+      onClick={onClick}
       {...props}
     >
       {props.children}

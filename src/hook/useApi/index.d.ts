@@ -4,7 +4,7 @@ export interface IApiProps {
   url: string;
   method?: MethodsType;
   params?: AnyObject | string | undefined;
-  data?: string;
+  data?: AnyObject | string;
 }
 export interface IUseApiProps {
   url: string;

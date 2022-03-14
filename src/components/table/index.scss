@@ -1,0 +1,61 @@
+@import 'styles/main';
+.custom-table {
+  .ant-table {
+    &-content {
+      .ant-table-thead {
+        tr {
+          .ant-table-cell {
+            font-weight: 600;
+            border-bottom: 0.5px solid rgba($white, $alpha: 0.2);
+          }
+          th {
+            background: unset;
+          }
+        }
+      }
+      .ant-table-tbody {
+        tr {
+          .ant-table-cell {
+            border-bottom: 0.5px solid rgba($white, $alpha: 0.2);
+          }
+          &:hover {
+            .ant-table-cell {
+              background-color: rgba($white, $alpha: 0.2);
+            }
+          }
+        }
+        tr:last-child {
+          .ant-table-cell {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+.dark-table {
+  .ant-table {
+    background-image: $dark-table-background;
+    color: $white;
+    &-content {
+      .ant-table-thead {
+        .ant-table-cell {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.light-table {
+  .ant-table {
+    background-image: $light-table-background;
+    color: $white;
+    &-content {
+      .ant-table-thead {
+        .ant-table-cell {
+          color: $white;
+        }
+      }
+    }
+  }
+}

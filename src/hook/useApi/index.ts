@@ -10,7 +10,16 @@ import {
 
 export const Api = async ({url, method = 'get', params, data}: IApiProps) => {
   try {
-    const response = await axios({url, method, params, data});
+    const response = await axios({
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      url,
+      method,
+      params,
+      data,
+    });
     return response && response.data;
   } catch (error) {
     // handle error here
@@ -24,7 +33,7 @@ const useApi = ({
   params = {},
   loadInitialState = false,
 }: IUseApiProps) => {
-  const [data, setData] = useState<AnyObject>();
+  const [data, setData] = useState<AnyObject | AnyObject[] | any>();
   const [currentUrl, setCurrentUrl] = useState(url);
   const [currentMethod, setCurrentMethod] = useState(method);
   const [currentParams, setCurrentParams] = useState(params);

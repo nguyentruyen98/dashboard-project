@@ -12,10 +12,25 @@ $light-theme-color-2: #8a817c;
 $light-theme-color-3: #bcb8b1;
 $light-theme-color-4: #f4f3ee;
 $light-theme-color-5: #e0afa0;
-
+$light-table-background: linear-gradient(
+  to right top,
+  #5e6cc2,
+  #d26dba,
+  #ff8391,
+  #ffb96a,
+  #f9f871
+);
 // dark theme color:
 $dark-theme-color-1: #11151c;
 $dark-theme-color-2: #212d40;
 $dark-theme-color-3: #364156;
 $dark-theme-color-4: #7d4e57;
 $dark-theme-color-5: #d66853;
+$dark-table-background: linear-gradient(
+  to right top,
+  #051937,
+  #004d7a,
+  #008793,
+  #00bf72,
+  #a8eb12
+);
