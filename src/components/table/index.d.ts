@@ -3,7 +3,7 @@ import {AnyObject} from 'constants/type';
 export type TSize = 'small' | 'middle' | 'large' | undefined;
 
 export interface ITableProps {
-  data: AnyObject | AnyObject[] | undefined;
+  data: any[] | undefined;
   columns: AnyObject[];
   header?: ReactNode;
   size?: TSize;

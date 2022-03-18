@@ -13,12 +13,20 @@ export interface ICouterState {
   theme: 'light' | 'dark';
   loading: boolean;
   toggle: boolean;
+  alert: {
+    type: 'Success' | 'Error' | 'Warning';
+    message: string;
+  };
 }
 
 const initialState: ICouterState = {
   theme: 'dark',
   loading: false,
   toggle: true,
+  alert: {
+    type: 'Success',
+    message: '',
+  },
 };
 const applicationSlice = createSlice({
   name: 'application',
@@ -32,6 +40,16 @@ const applicationSlice = createSlice({
     },
     setToggle: (state, action: PayloadAction<boolean>) => {
       state.toggle = action.payload;
+    },
+    setAlert: (
+      state,
+      action: PayloadAction<{
+        type: 'Success' | 'Error' | 'Warning';
+        message: string;
+      }>,
+    ) => {
+      state.alert.type = action.payload.type;
+      state.alert.message = action.payload.message;
     },
   },
 });
@@ -49,7 +67,8 @@ export const changeTheme = (): AppThunk => (dispatch, getState) => {
 // export const setToggle = (): AppThunk => (dispatch, getState) => {
 //   const currentToggle = getState().application.toggle;
 // };
-export const {setTheme, setLoading, setToggle} = applicationSlice.actions;
+export const {setTheme, setLoading, setToggle, setAlert} =
+  applicationSlice.actions;
 
 export const store = configureStore({
   reducer: {

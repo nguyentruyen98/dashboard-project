@@ -1,0 +1,16 @@
+.ant-message {
+  .custom-msg {
+    .ant-message-custom-content {
+      display: flex;
+      img {
+        margin-right: 15px;
+      }
+      .content-container {
+        text-align: left;
+        .title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
