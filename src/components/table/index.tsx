@@ -6,7 +6,7 @@ import {ITableProps} from 'components/table/index.d';
 import React from 'react';
 import {useApplicationSelector} from 'stores/application/application';
 const Table = ({
-  data,
+  data = [],
   columns,
   size = 'large',
   loading = false,
@@ -24,7 +24,7 @@ const Table = ({
     <div>
       {header && <div className="mb-15">{header()}</div>}
       <AntdTable
-        dataSource={data || []}
+        dataSource={data}
         columns={columns}
         bordered={false}
         size={size}
